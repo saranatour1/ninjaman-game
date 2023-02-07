@@ -217,7 +217,6 @@
         } else if (choiceCase == 4) {
           return mapChoice[4];
         }
-        console.log(choiceCase);
       }
 
       var map = mapGenerate();
@@ -243,10 +242,6 @@
         }
       }
       var totalScore = counterSushi + counterOngiri;
-
-      console.log("game Total score is=", totalScore);
-      console.log("game sushi score=", counterSushi);
-      console.log("game ongiri score", counterOngiri);
 
       var points = document.getElementById("points");
       var lives = document.getElementById("lives");
@@ -403,13 +398,11 @@
           map[ninjaman.y][ninjaman.x] = 0;
           score = score + 5;
           points.innerText = score;
-          console.log(points.innerText);
         }
         if (map[ninjaman.y][ninjaman.x] == 3) {
           map[ninjaman.y][ninjaman.x] = 0;
           score = score + 10;
           points.innerText = score;
-          console.log(points.innerText);
         }
         if (
           points.innerText == totalScore &&
@@ -429,7 +422,6 @@
           (ninjaman.x === ghost2_pos.x_g2 && ninjaman.y === ghost2_pos.y_g2) ||
           (ninjaman.x === ghost3_pos.x_g3 && ninjaman.y === ghost3_pos.y_g3)
         ) {
-          console.log(" im here");
           numberoflives--;
           lives.innerText = numberoflives;
         }
@@ -442,9 +434,3 @@
     </script>
   </body>
 </html>
-<!-- Notes -->
-<!-- (Basic) Keep Score of how many Sushi's NinjaMan eats DONE -->
-<!--(Basic) Add Onigiri as an alternative food to eat  DONE  -->
-<!-- (Intermediate) Random world generated when loading the page DONE -->
-<!-- (Advanced) Add Ghosts that chase NinjaMan around WORKING ON IT -->
-<!-- (Advanced) Give NinjaMan 3 lives where Game Over occurs when a ghost hits NinjaMan 3 times WORKING ON IT -->
